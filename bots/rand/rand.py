@@ -30,6 +30,9 @@ class Bot:
         # All legal moves
         moves = state.moves()
 
+        #hallo
+
+
 
         # print state.get_deck().get_card_states()
         # Return a random choice
