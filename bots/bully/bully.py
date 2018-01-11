@@ -43,6 +43,8 @@ class Bot:
 			chosen_move = moves_trump_suit[0]
 			return chosen_move
 
+		#hello
+
 		# If the opponent has played a card
 		if state.get_opponents_played_card() is not None:
 
