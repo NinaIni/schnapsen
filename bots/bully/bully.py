@@ -39,11 +39,11 @@ class Bot:
 			if move[0] is not None and Deck.get_suit(move[0]) == state.get_trump_suit():
 				moves_trump_suit.append(move)
 
+                #anderecomment
+
 		if len(moves_trump_suit) > 0:
 			chosen_move = moves_trump_suit[0]
 			return chosen_move
-
-		#hello
 
 		# If the opponent has played a card
 		if state.get_opponents_played_card() is not None:
