@@ -6,6 +6,8 @@ uniformly at random.
 from api import State, util
 import random
 
+class Bot:
+
 	__num_samples = -1
 	__depth = -1
 
