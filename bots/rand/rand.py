@@ -30,7 +30,7 @@ class Bot:
         # All legal moves
         moves = state.moves()
 
-        #hallootjes2
+
 
 
 
