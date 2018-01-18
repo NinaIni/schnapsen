@@ -64,7 +64,7 @@ class Bot:
 
             # Prune the search tree
             # We know this state will never be chosen, so we stop evaluating its children
-            if beta<= alpha:
+            if beta <= alpha:
                 break
 
         return best_value, best_move

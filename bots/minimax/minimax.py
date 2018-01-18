@@ -12,7 +12,7 @@ class Bot:
     __max_depth = -1
     __randomize = True
 
-    def __init__(self, randomize=True, depth=6):
+    def __init__(self, randomize=True, depth=4):
         """
         :param randomize: Whether to select randomly from moves of equal value (or to select the first always)
         :param depth:
@@ -35,10 +35,8 @@ class Bot:
         :param depth:
         :return: A tuple containing the value of this state, and the best move for the player currently to move
         """
-
         if state.finished():
-            winner, points = state.winner()
-            return (points, None) if winner == 1 else (-points, None)
+            return (1.0, None) if state.winner() == 1 else (-1.0, None)
 
         if depth == self.__max_depth:
             return heuristic(state)
@@ -57,7 +55,7 @@ class Bot:
 
             # IMPLEMENT: Add a recursive function call so that 'value' will contain the
             # minimax value of 'next_state'
-            value = self.value(next_state, depth+1)
+            value, m = self.value(next_state, depth+1)
 
             if maximizing(state):
                 if value > best_value:
@@ -73,10 +71,8 @@ class Bot:
 def maximizing(state):
     # type: (State) -> bool
     """
-    Whether we're the maximizing player (1) or the minimizing player (2).
-
     :param state:
-    :return:
+    :return: True if we're the maximizing player (player 1), false otherwise (player 2).
     """
     return state.whose_turn() == 1
 
@@ -88,8 +84,4 @@ def heuristic(state):
     :param state:
     :return: A heuristic evaluation for the given state (between -1.0 and 1.0)
     """
-    ratio = 1.0
-
-    if state.get_points(1) + state.get_pending_points(1) + state.get_points(2) +  state.get_pending_points(2) != 0:
-        ratio =  state.get_points(1) + state.get_pending_points(1) / state.get_points(1) + state.get_pending_points(1) + state.get_points(2) +  state.get_pending_points(2)
-    return ratio * 2.0 - 1.0, None
+    return util.ratio_points(state, 1) * 2.0 - 1.0, None
