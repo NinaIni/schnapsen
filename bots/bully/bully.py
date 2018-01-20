@@ -6,7 +6,6 @@ uniformly at random.
 # Import the API objects
 from api import State
 from api import Deck
-import random
 
 
 class Bot:
@@ -38,8 +37,6 @@ class Bot:
 
 			if move[0] is not None and Deck.get_suit(move[0]) == state.get_trump_suit():
 				moves_trump_suit.append(move)
-
-                #anderecomment2
 
 		if len(moves_trump_suit) > 0:
 			chosen_move = moves_trump_suit[0]
