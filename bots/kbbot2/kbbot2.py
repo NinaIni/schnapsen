@@ -49,10 +49,12 @@ class Bot:
 
         # Add general information about the game
         load2.jack_cards(kb)
-
+        load2.king_cards(kb)
+        load2.queen_cards(kb)
         # Add the necessary knowledge about the strategy
         load2.play_jack_cards(kb)
-
+        load2.play_king_cards(kb)
+        load2.play_queen_cards(kb)
         # This line stores the index of the card in the deck.
         # If this doesn't make sense, refer to _deck.py for the card index mapping
         index = move[0]
