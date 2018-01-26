@@ -89,7 +89,7 @@ def strategy_knowledge(kb):
     kb.add_clause(~PJ9, J9)
     kb.add_clause(~PJ14, J14)
     kb.add_clause(~PJ19, J19)
-<<<<<<< Updated upstream
+
     # playAs
     kb.add_clause(~PJ0, J0)
     kb.add_clause(~PJ5, J5)
@@ -99,11 +99,8 @@ def strategy_knowledge(kb):
     kb.add_clause(~J5, PJ5)
     kb.add_clause(~J10, PJ10)
     kb.add_clause(~J15, PJ15)
-    # playKs
-=======
-
     # playKing
->>>>>>> Stashed changes
+
     kb.add_clause(~PJ2, J2)
     kb.add_clause(~PJ7, J7)
     kb.add_clause(~PJ12, J12)
@@ -112,11 +109,7 @@ def strategy_knowledge(kb):
     kb.add_clause(~J7, PJ7)
     kb.add_clause(~J12, PJ12)
     kb.add_clause(~J17, PJ17)
-<<<<<<< Updated upstream
-    # playQs
-=======
     # playQueen
->>>>>>> Stashed changes
     kb.add_clause(~PJ3, J3)
     kb.add_clause(~PJ8, J8)
     kb.add_clause(~PJ13, J13)
@@ -125,7 +118,6 @@ def strategy_knowledge(kb):
     kb.add_clause(~J8, PJ8)
     kb.add_clause(~J13, PJ13)
     kb.add_clause(~J18, PJ18)
-<<<<<<< Updated upstream
 
     kb.add_clause(~PJ8)
     kb.add_clause(~PJ9)
@@ -135,5 +127,4 @@ def strategy_knowledge(kb):
 
     # Print out whether the KB is satisfiable (if there are no models, it is not satisfiable)
     print kb.satisfiable()
-=======
->>>>>>> Stashed changes
+
