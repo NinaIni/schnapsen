@@ -61,16 +61,6 @@ def general_information(kb):
     kb.add_clause(J13)
     kb.add_clause(J18)
 
-    kb.add_clause(J2)
-    kb.add_clause(J7)
-    kb.add_clause(J12)
-    kb.add_clause(J17)
-
-    kb.add_clause(J3)
-    kb.add_clause(J8)
-    kb.add_clause(J13)
-    kb.add_clause(J18)
-
 def strategy_knowledge(kb):
     # DEFINITION OF THE STRATEGY
     # Add clauses (This list is sufficient for this strategy)

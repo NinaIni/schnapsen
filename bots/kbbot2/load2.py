@@ -1,4 +1,4 @@
-from bots.kbbot.kb import KB, Boolean, Integer
+from bots.kbbot2.kb import KB, Boolean, Integer
 
 # Initialise all variables that you need for you strategies and game knowledge.
 # Add those variables here.. The following list is complete for the Play Jack strategy.
@@ -123,4 +123,3 @@ def play_ace_cards(kb):
     kb.add_clause(~J10, PJ10)
     kb.add_clause(~J15, PJ15)
 
-#hil

@@ -10,7 +10,7 @@ from load.py.
 
 from api import State
 import random
-from bots.kbbot2 import load
+from bots.kbbot import load
 
 from kb import KB, Boolean
 

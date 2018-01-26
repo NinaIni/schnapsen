@@ -8,10 +8,13 @@ It loads general information about the game, as well as the definition of a stra
 from load.py.
 """
 
-from api import State, util
-import random, load
 
-from kb import KB, Boolean, Integer
+import random
+
+from api import State
+from kb import KB, Boolean
+
+from bots.kbbot2 import load2
 
 class Bot:
 
@@ -45,10 +48,10 @@ class Bot:
         kb = KB()
 
         # Add general information about the game
-        load.general_information(kb)
+        load2.jack_cards(kb)
 
         # Add the necessary knowledge about the strategy
-        load.strategy_knowledge(kb)
+        load2.play_jack_cards(kb)
 
         # This line stores the index of the card in the deck.
         # If this doesn't make sense, refer to _deck.py for the card index mapping
