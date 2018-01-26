@@ -50,46 +50,34 @@ PJ19 = Boolean('pj19')
 kb = KB()
 
 # GENERAL INFORMATION ABOUT THE CARDS
-<<<<<<< Updated upstream
 # This adds information which cards are As
 kb.add_clause(J0)
 kb.add_clause(J5)
 kb.add_clause(J10)
 kb.add_clause(J15)
-=======
->>>>>>> Stashed changes
 # This adds information which cards are Jacks
 kb.add_clause(J4)
 kb.add_clause(J9)
 kb.add_clause(J14)
 kb.add_clause(J19)
-<<<<<<< Updated upstream
 # This adds information which cards are Kings
-=======
 # Add here whatever is needed for your strategy.
 kb.add_clause(J0)
 kb.add_clause(J5)
 kb.add_clause(J10)
 kb.add_clause(J15)
 
->>>>>>> Stashed changes
 kb.add_clause(J2)
 kb.add_clause(J7)
 kb.add_clause(J12)
 kb.add_clause(J17)
-<<<<<<< Updated upstream
 # This adds information which cards are Queens
-=======
 
->>>>>>> Stashed changes
 kb.add_clause(J3)
 kb.add_clause(J8)
 kb.add_clause(J13)
 kb.add_clause(J18)
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 # DEFINITION OF THE STRATEGY
 # Add clauses (This list is sufficient for this strategy)
 # PJ is the strategy to play jacks first, so all we need to model is all x PJ(x) <-> J(x),
@@ -112,11 +100,9 @@ kb.add_clause(~J0, PJ0)
 kb.add_clause(~J5, PJ5)
 kb.add_clause(~J10, PJ10)
 kb.add_clause(~J15, PJ15)
-<<<<<<< Updated upstream
+
 #playKs
-=======
 #playKing
->>>>>>> Stashed changes
 kb.add_clause(~PJ2, J2)
 kb.add_clause(~PJ7, J7)
 kb.add_clause(~PJ12, J12)
@@ -125,11 +111,7 @@ kb.add_clause(~J2, PJ2)
 kb.add_clause(~J7, PJ7)
 kb.add_clause(~J12, PJ12)
 kb.add_clause(~J17, PJ17)
-<<<<<<< Updated upstream
-#playQs
-=======
 #playQueen
->>>>>>> Stashed changes
 kb.add_clause(~PJ3, J3)
 kb.add_clause(~PJ8, J8)
 kb.add_clause(~PJ13, J13)
@@ -140,13 +122,10 @@ kb.add_clause(~J13, PJ13)
 kb.add_clause(~J18, PJ18)
 # Add here other strategies
 
-<<<<<<< Updated upstream
 kb.add_clause(~PJ8)
 kb.add_clause(~PJ9)
-=======
 kb.add_clause(~PJ0)
 kb.add_clause(~PJ5)
->>>>>>> Stashed changes
 # Print all models of the knowledge base
 for model in kb.models():
     print model
