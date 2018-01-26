@@ -70,3 +70,4 @@ class Bot:
         # entailed (proof by refutation)
         return kb.satisfiable()
 
+
