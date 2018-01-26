@@ -1,4 +1,4 @@
-from kb import KB, Boolean, Integer
+from bots.kbbot.kb import KB, Boolean, Integer
 
 # Initialise all variables that you need for you strategies and game knowledge.
 # Add those variables here.. The following list is complete for the Play Jack strategy.
@@ -114,4 +114,84 @@ def strategy_knowledge(kb):
 
     # Print out whether the KB is satisfiable (if there are no models, it is not satisfiable)
     print kb.satisfiable()
+
+def jack_cards(kb):
+    kb.add_clause(J4)
+    kb.add_clause(J9)
+    kb.add_clause(J14)
+    kb.add_clause(J19)
+
+def play_jack_cards(kb):
+    kb.add_clause(~J4, PJ4)
+    kb.add_clause(~J9, PJ9)
+    kb.add_clause(~J14, PJ14)
+    kb.add_clause(~J19, PJ19)
+    kb.add_clause(~PJ4, J4)
+    kb.add_clause(~PJ9, J9)
+    kb.add_clause(~PJ14, J14)
+    kb.add_clause(~PJ19, J19)
+
+def king_cards(kb):
+    kb.add_clause(J2)
+    kb.add_clause(J7)
+    kb.add_clause(J12)
+    kb.add_clause(J17)
+
+def play_king_cards(kb):
+    kb.add_clause(~PJ2, J2)
+    kb.add_clause(~PJ7, J7)
+    kb.add_clause(~PJ12, J12)
+    kb.add_clause(~PJ17, J17)
+    kb.add_clause(~J2, PJ2)
+    kb.add_clause(~J7, PJ7)
+    kb.add_clause(~J12, PJ12)
+    kb.add_clause(~J17, PJ17)
+
+def queen_cards(kb):
+    kb.add_clause(J3)
+    kb.add_clause(J8)
+    kb.add_clause(J13)
+    kb.add_clause(J18)
+
+def play_queen_cards(kb):
+    kb.add_clause(~PJ3, J3)
+    kb.add_clause(~PJ8, J8)
+    kb.add_clause(~PJ13, J13)
+    kb.add_clause(~PJ18, J18)
+    kb.add_clause(~J3, PJ3)
+    kb.add_clause(~J8, PJ8)
+    kb.add_clause(~J13, PJ13)
+    kb.add_clause(~J18, PJ18)
+
+def ten_cards(kb):
+    kb.add_clause(J1)
+    kb.add_clause(J6)
+    kb.add_clause(J11)
+    kb.add_clause(J16)
+
+def play_ten_cards(kb):
+    kb.add_clause(~PJ1, J1)
+    kb.add_clause(~PJ6, J6)
+    kb.add_clause(~PJ11, J11)
+    kb.add_clause(~PJ16, J16)
+    kb.add_clause(~J1, PJ1)
+    kb.add_clause(~J6, PJ6)
+    kb.add_clause(~J11, PJ11)
+    kb.add_clause(~J16, PJ16)
+
+def ace_cards(kb):
+    kb.add_clause(J0)
+    kb.add_clause(J5)
+    kb.add_clause(J10)
+    kb.add_clause(J15)
+
+def play_ace_cards(kb):
+    kb.add_clause(~PJ0, J0)
+    kb.add_clause(~PJ5, J5)
+    kb.add_clause(~PJ10, J10)
+    kb.add_clause(~PJ15, J15)
+    kb.add_clause(~J0, PJ0)
+    kb.add_clause(~J5, PJ5)
+    kb.add_clause(~J10, PJ10)
+    kb.add_clause(~J15, PJ15)
 

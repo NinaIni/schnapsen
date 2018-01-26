@@ -8,12 +8,10 @@ It loads general information about the game, as well as the definition of a stra
 from load.py.
 """
 
-from api import State
-import random
-from bots.kbbot2 import load
+from api import State, util
+import random, load
 
-from kb import KB, Boolean
-
+from kb import KB, Boolean, Integer
 
 class Bot:
 
@@ -60,7 +58,7 @@ class Bot:
         # Note that as far as kb.py is concerned, two objects created with the same
         # string in the constructor are equivalent, and are seen as the same symbol.
         # Here we use "pj" to indicate that the card with index "index" should be played with the
-        # PlayJack heuristics that was defined in class. Initialise a different variable if 
+        # PlayJack heuristics that was defined in class. Initialise a different variable if
         # you want to apply a different strategy (that you will have to define in load.py)
         variable_string = "pj" + str(index)
         strategy_variable = Boolean(variable_string)
@@ -71,3 +69,4 @@ class Bot:
         # If the knowledge base is not satisfiable, the strategy variable is
         # entailed (proof by refutation)
         return kb.satisfiable()
+
