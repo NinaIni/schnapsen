@@ -45,6 +45,11 @@ PJ19 = Boolean('pj19')
 
 def general_information(kb):
     # GENERAL INFORMATION ABOUT THE CARDS
+    # This adds information which cards are As
+    kb.add_clause(J0)
+    kb.add_clause(J5)
+    kb.add_clause(J10)
+    kb.add_clause(J15)
     # This adds information which cards are Jacks
     kb.add_clause(J4)
     kb.add_clause(J9)
@@ -101,3 +106,12 @@ def strategy_knowledge(kb):
     kb.add_clause(~J8, PJ8)
     kb.add_clause(~J13, PJ13)
     kb.add_clause(~J18, PJ18)
+
+    kb.add_clause(~PJ8)
+    kb.add_clause(~PJ9)
+    # Print all models of the knowledge base
+    for model in kb.models():
+        print model
+
+    # Print out whether the KB is satisfiable (if there are no models, it is not satisfiable)
+    print kb.satisfiable()
