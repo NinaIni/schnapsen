@@ -123,4 +123,4 @@ def play_ace_cards(kb):
     kb.add_clause(~J10, PJ10)
     kb.add_clause(~J15, PJ15)
 
-#hi
+#hil
