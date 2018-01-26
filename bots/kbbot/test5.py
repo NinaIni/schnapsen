@@ -50,11 +50,6 @@ PJ19 = Boolean('pj19')
 kb = KB()
 
 # GENERAL INFORMATION ABOUT THE CARDS
-# This adds information which cards are As
-kb.add_clause(J0)
-kb.add_clause(J5)
-kb.add_clause(J10)
-kb.add_clause(J15)
 # This adds information which cards are Jacks
 kb.add_clause(J4)
 kb.add_clause(J9)
@@ -91,17 +86,7 @@ kb.add_clause(~PJ4, J4)
 kb.add_clause(~PJ9, J9)
 kb.add_clause(~PJ14, J14)
 kb.add_clause(~PJ19, J19)
-#playAs
-kb.add_clause(~PJ0, J0)
-kb.add_clause(~PJ5, J5)
-kb.add_clause(~PJ10, J10)
-kb.add_clause(~PJ15, J15)
-kb.add_clause(~J0, PJ0)
-kb.add_clause(~J5, PJ5)
-kb.add_clause(~J10, PJ10)
-kb.add_clause(~J15, PJ15)
 
-#playKs
 #playKing
 kb.add_clause(~PJ2, J2)
 kb.add_clause(~PJ7, J7)
