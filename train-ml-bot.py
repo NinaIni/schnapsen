@@ -11,7 +11,7 @@ import sklearn.linear_model
 from sklearn.externals import joblib
 
 from api import State
-from bots.ml_rand_2 import features
+from bots.ml_rand_1.ml_rand_1 import features
 
 from bots.rand import rand
 
@@ -80,6 +80,6 @@ for str in target:
 print('instances per class: {}'.format(count))
 
 # Store the model in the ml directory
-joblib.dump(model, './bots/ml/randmodel2.pkl')
+joblib.dump(model, './bots/ml_rand_1/randmodel1.pkl')
 
 print('Done')
