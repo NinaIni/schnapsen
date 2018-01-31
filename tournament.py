@@ -9,7 +9,7 @@ python play.py -h
 from argparse import ArgumentParser
 from api import State, util, engine
 import random
-
+#test
 def run_tournament(options):
 
     botnames = options.players.split(",")
