@@ -155,8 +155,8 @@ def features(state):
     feature_set.append(leader)
 
     # Add whose turn it is to feature set
-    # whose_turn = state.whose_turn()
-    # feature_set.append(whose_turn)
+    whose_turn = state.whose_turn()
+    feature_set.append(whose_turn)
 
     # Add opponent's played card to feature set
     opponents_played_card = state.get_opponents_played_card()

@@ -118,12 +118,12 @@ def features(state):
     feature_set += perspective
 
     # Add player 1's points to feature set
-    p1_points = state.get_points(1)
-    feature_set.append(p1_points)
+    # p1_points = state.get_points(1)
+    # feature_set.append(p1_points)
 
     # Add player 2's points to feature set
-    p2_points = state.get_points(2)
-    feature_set.append(p2_points)
+    # p2_points = state.get_points(2)
+    # feature_set.append(p2_points)
 
     # Add player 1's pending points to feature set
     p1_pending_points = state.get_pending_points(1)
@@ -151,8 +151,8 @@ def features(state):
     feature_set.append(stock_size)
 
     # Add leader to feature set
-    leader = state.leader()
-    feature_set.append(leader)
+    # leader = state.leader()
+    # feature_set.append(leader)
 
     # Add whose turn it is to feature set
     # whose_turn = state.whose_turn()
