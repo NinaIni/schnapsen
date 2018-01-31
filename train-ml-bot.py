@@ -11,7 +11,7 @@ import sklearn.linear_model
 from sklearn.externals import joblib
 
 from api import State
-from ml_rand_2.ml_rand_2 import features
+from bots.ml_rand_2 import features
 
 from bots.rand import rand
 
