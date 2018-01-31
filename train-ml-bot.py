@@ -18,7 +18,7 @@ from bots.rdeep import rdeep
 from bots.ml.ml import features
 
 # How many games to play
-GAMES = 1000
+GAMES = 10000
 
 # Which phase the game starts in
 PHASE = 1
@@ -82,6 +82,6 @@ for str in target:
 print('instances per class: {}'.format(count))
 
 # Store the model in the ml directory
-joblib.dump(model, './bots/ml/rdeepmodel1.pkl')
+joblib.dump(model, './bots/ml/rdeepmodel.pkl')
 
 print('Done')
