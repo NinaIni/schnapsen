@@ -4,18 +4,16 @@ Every observed state is converted to a feature vector and labeled with the event
 (-1.0: player 2 won, 1.0: player 1 won)
 This is part of the second worksheet.
 """
-from api import State, util
-
 # This package contains various machine learning algorithms
 import sys
-import sklearn
+
 import sklearn.linear_model
 from sklearn.externals import joblib
 
-from bots.rand import rand
-from bots.rdeep import rdeep
+from api import State
+from bots.ml.ml_rand_1 import features
 
-from bots.ml.ml import features
+from bots.rand import rand
 
 # How many games to play
 GAMES = 10000
@@ -25,7 +23,7 @@ PHASE = 1
 
 # The player we'll observe
 # player = rand.Bot()
-player = rdeep.Bot()
+player = rand.Bot()
 
 data = []
 target = []
