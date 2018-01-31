@@ -164,6 +164,7 @@ def features(state):
     # You don't need to add anything to this part
     opponents_played_card = opponents_played_card if opponents_played_card is not None else -1
     feature_set.append(opponents_played_card)
+    #hoi
 
     # Return feature set
     return feature_set
