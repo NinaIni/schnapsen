@@ -11,7 +11,7 @@ import sklearn.linear_model
 from sklearn.externals import joblib
 
 from api import State
-from bots.ml.ml_rand_1 import features
+from bots.ml.ml_rand_2 import features
 
 from bots.rand import rand
 
@@ -22,8 +22,8 @@ GAMES = 10000
 PHASE = 1
 
 # The player we'll observe
-# player = rand.Bot()
 player = rand.Bot()
+# player = rdeep.Bot()
 
 data = []
 target = []
@@ -80,6 +80,6 @@ for str in target:
 print('instances per class: {}'.format(count))
 
 # Store the model in the ml directory
-joblib.dump(model, './bots/ml/rdeepmodel.pkl')
+joblib.dump(model, './bots/ml/randmodel2.pkl')
 
 print('Done')
