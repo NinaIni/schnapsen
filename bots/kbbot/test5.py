@@ -106,6 +106,9 @@ kb.add_clause(~J8, PJ8)
 kb.add_clause(~J13, PJ13)
 kb.add_clause(~J18, PJ18)
 # Add here other strategies
+#TrumpWedding
+
+kb.add_clause()
 
 kb.add_clause(~PJ8)
 kb.add_clause(~PJ9)

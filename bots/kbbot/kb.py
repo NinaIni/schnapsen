@@ -710,4 +710,3 @@ def union(*lists):
                 result.append(symbol)
 
     return result
-

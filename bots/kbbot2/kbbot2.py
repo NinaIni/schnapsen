@@ -48,6 +48,12 @@ class Bot:
         kb = KB()
 
         # Add general information about the game
+        if state.get_trump_suit() == C and
+            load2.
+        if state.get_trump_suit() == D
+        if state.get_trump_suit() == D
+        if state.get_trump_suit() == D
+
         load2.jack_cards(kb)
         load2.king_cards(kb)
         load2.queen_cards(kb)
